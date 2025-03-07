@@ -23,7 +23,7 @@ app.post('/resize', async (req, res, next) => {
         })
         .toBuffer();
 
-        return res.status(200).json({ message : "이미지 변환 성공!" });
+        return res.status(201).json({ message : "이미지 변환 성공!" });
     } catch (err){
         console.error(err);
         return res.status(500).json({ message : "이미지 리사이즈 실패!" });
